@@ -32,7 +32,7 @@
 
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About SML/NJ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -40,31 +40,99 @@
         </div>
     </nav>
 
-    <div class="container">
+    
         <div class="jumbotron">
             <div class="row">
-            <div class="col-lg-8"><img src="images/Lindig2.jpeg" />
-                Standard ML of New Jersey (SML/NJ) is a compiler and
-programming environment for the <A HREF="sml.html"><I>Standard
-ML</I></A> programming language.  It was originally developed jointly
-at Bell Laboratories and <A
-HREF="http://www.cs.princeton.edu/">Princeton University</A>, and is
-now a joint project between researchers at
-<A HREF="http://www.alcatel-lucent.com/wps/portal/BellLabs">
-Bell Laboratories</A>,
-<A HREF="http://www.lucent.com/">Lucent Technologies</A>),
-<A HREF="http://www.cs.princeton.edu/">Princeton University</A>,
-<A HREF="http://www.cs.yale.edu/">Yale University</A> 
-(<A HREF="http://flint.cs.yale.edu/">The FLINT Project</A>), and
-<A HREF="http://www.research.att.com/">AT&amp;T Research</A>.
+                 <div class="col-sm-2"> 
+                     <img  src="images/Lindig2.jpeg" />
+                 </div>
+                 <div class="row">
+                     <div class="col-sm-14">
+                        Standard ML of New Jersey (SML/NJ) is a compiler and
+                        programming environment for the <A HREF="sml.html"><I>Standard
+                        ML</I></A> programming language.  It was originally developed jointly
+                        at Bell Laboratories and <A
+                        HREF="http://www.cs.princeton.edu/">Princeton University</A>, and is
+                        now a joint project between researchers at
+                        <A HREF="http://www.alcatel-lucent.com/wps/portal/BellLabs">
+                        Bell Laboratories</A>,
+                        <A HREF="http://www.lucent.com/">Lucent Technologies</A>),
+                        <A HREF="http://www.cs.princeton.edu/">Princeton University</A>,
+                        <A HREF="http://www.cs.yale.edu/">Yale University</A> 
+                        (<A HREF="http://flint.cs.yale.edu/">The FLINT Project</A>), and
+                        <A HREF="http://www.research.att.com/">AT&amp;T Research</A>.
+                    </div>
                 </div>
+                
+            </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                    <h4>Plans</h4>  
+                    <h5 class="text-left">We are currently planning two more releases using the current version numbering scheme: one that will add 64-bit support, and another that will add some additional improvements to type error messages (the order of these releases is unclear). After that we plan to reset the numbering scheme for SML/NJ versions, starting with 4.0 (i.e., 110.79 => 4.0).
+                    </div>
+            </div>
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading" >
+                            <h5> Learn About SML/NJ </h5>
+                        </div>
+                        <div class="panel-body">
+                         <ul>
+                        <li><a href="doc/literature.html#books">Books</a></li>
+                        <li><a href="doc/literature.html#tutorials">Tutorials</a></li>
+                        <li><a href="doc/index.html">SML/NJ User's Guide</a></li>
+                        <!-- changed URL until www.standardml.org works again
+                        <li><a href="http://www.standardml.org/Basis">SML'97 Basis Library</a></li>
+                        -->
+                        <li><a href="http://www.sml-family.org/Basis">SML'97 Basis Library</a></li>
+                        <li><a href="doc/FAQ/index.html">SML/NJ FAQ
+                            (Frequently Asked Questions)</a></li>
+                        <li><a href="doc/Conversion/index.html">SML'97 Conversion Guide</a></li>
+                        
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                 <div class="panel panel-warning">
+                        <div class="panel-heading" >
+                            <h5>Release History </h5>
+                        </div>
+                        <div class="panel-body">
+                        <ul>
+                          <li>[08/22/14] Version <a href="dist/working/110.77/index.html">110.77</a> is released.
+                          See the <a href="dist/working/110.77/110.77-README.html">README</a>
+                          for details.
+                          </li>
+                          <li>[08/23/13] Version <a href="dist/working/110.76/index.html">110.76</a> is released.
+                          See the <a href="dist/working/110.76/110.76-README.html">README</a>
+                          for details.
+                          </li>
+                          <li>[10/01/12] Version <a href="dist/working/110.75/index.html">110.75</a> is released.
+                          See the <a href="dist/working/110.75/110.75-README.html">README</a>
+                          for details.
+                          </li>
+                          <li>[01/31/12] Version <a href="dist/working/110.74/index.html">110.74</a> is released.
+                          See the <a href="dist/working/110.74/110.74-README.html">README</a>
+                          for details.
+                          </li>
+                         <li><a href="old-news.html">Older news</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    
+    <blockquote>
+       <h5>This project is based upon work supported in part by the National Science Foundation under Grant No. CNS-0454136.
+        <h5>Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation (NSF).     
+    </blockquote>
     <footer class="text-info">Copyright &copy; 2004-2013, the SML/NJ Fellowship</footer>
 </body>
 </html>
