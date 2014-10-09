@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>About SMLNJ </title>
+    <title>Standard ML '97 </title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
@@ -44,141 +44,109 @@
 
         <div class="jumbotron">
             <div class="panel panel-success">
-                <div class="panel-heading"><h4>Standard ML</div>
-                <div class="panel-body"> 
+                <div class="panel-heading"><h4>Standard ML '97</h4></div>
+                <div class="panel-body">
                     <blockquote><small>
-                Standard ML is a safe, modular, strict, functional, polymorphic
-                programming language with compile-time type checking
-                and type inference,
-                garbage collection, exception handling,
-                immutable data types and updatable references,
-                abstract data types, and parametric modules.  
-                It has efficient implementations and a formal definition
-                with a proof of soundness.
+                    <a href="sml.html">Standard ML</a> was proposed in 1983, designed from '84-'88,and defined in <a href="http://mitpress.mit.edu/book-home.tcl?isbn=0262631326">Definition of Standard ML (Milner, Tofte, Harper, MIT Press, 1990)</a>.
+                    <br><br>    
+                    Standard ML '97 is a modest revision (and simplification) of the language, defined in <a href="http://mitpress.mit.edu/book-home.tcl?isbn=0262631814"><I>The Definition of Standard ML                    (Revised)</I> (Milner, Tofte, Harper, MacQueen, MIT Press, 1997)</a>.
+                        <br>
+                    The name of the revised language remains "Standard ML", but we also
+                    refer to it as "Standard ML '97" or "SML '97" to distinguish it
+                    from the 1990 version, which can be referred to as  "SML '90".
+                    <br>    
+                    At the same time, the new <A HREF="http://www.sml-family.org/Basis/">
+                    <I>SML Basis Library</I></A> is added to the specification of the language.  
+                    The new basis library is intended to support a wide range of systems
+                    and applications programming: it specifies
+                    a broad collection of predefined modules that provide basic types,
+                    input/output facilities, and interfaces for interacting with the
+                    host operating system in a portable way.
+                    <br>
+                    The highlights of the language changes in SML '97 are given below.
+                    For much more detail on the changes, and suggestions on how to convert
+                    SML '90 code to run under SML '97, see the <a
+                    href="doc/Conversion/index.html">SML '97 Conversion Guide</a>.
+                    <br>
+                    The principal language changes in <B>SML '97</B> are:
+                    <ul>
+                    <li>
+                    <em>The elimination of imperative type variables</em>.  The role of
+                    imperative type variables in constraining polymorphism in the presence
+                    of effects is now played by the <em>value restriction</em>, which
+                    allows the type of a val binding to be generalized only when the right
+                    hand side is an expression in a restricted form called a <em>value
+                    expression</em>.  A value expression is either a constant, a variable,
+                    a function expression (i.e. a lambda expression) or is built from
+                    these elements using products and constructions.
+                    <li>
+                    <em>The elimination of structure sharing</em>.  Type sharing is still
+                    available, and the structure sharing notation remains, but is
+                    interpreted in a weaker sense, as an indirect way of expressing type
+                    sharing.  The role of type sharing is restricted somewhat so as not
+                    to conflict with type definitions.
+                    <li>
+                    <em>The addition of type definitions in signatures</em>.  There is
+                    also a new <em>where type</em> notation that allows one to modify an
+                    existing signature by adding definitions for its type components.
+                    New forms of datatype specifications and definitions allow a datatype
+                    to be defined to be the same as an existing datatype.
+                    </ul>
 
-                <dl>
-                <dt><strong>Safe</strong><dd>
-                ML is safe, in that a program that passes the type-checker
-                cannot dump core, access private fields of abstract data types,
-                mistake integers for pointers, or otherwise "go wrong."
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Documentation</h4>
+                        </div>
+                    <div class="panel-body">
+                    A <A HREF="doc/Conversion/index.html"> SML '97 Conversion Guide</A>
+                    covers the issues of converting programs from
+                    SML/NJ 0.93 to SML '97 (SML/NJ 110).  A useful conversion aid is the
+                    <A HREF="doc/Conversion/top-level-comparison.html">
+                    Top Level Environment Comparison</A>,
+                    which summarizes the differences between the top level environments of
+                    SML/NJ 0.93 (which is assumed by some older textbooks) and the new SML
+                    '97 (SML/NJ 110) top level.  Full documentation for the
+                    <!-- changed URL until www.standardml.org works again
+                    <A HREF="http://www.standardml.org/Basis/">Basis Library</A>
+                    -->
+                    <A HREF="http://www.sml-family.org/Basis/">Basis Library</A>
+                    is available online.
 
-                <dt><strong>Modular</strong><dd>
-                The Standard ML module system supports modules (called <i>structures</i>)
-                and interfaces (called <i>signatures</i>); the signature of a module
-                determines what components and types from the module are visible
-                from outside.  There is a flexible system for matching structures
-                to signatures: there can be several different views (signatures)
-                of the same structure, and there can be several different
-                implementations (structures) matching the same signature.
 
-                <dt><strong>Functional</strong><dd>
-                ML has higher-order functions:  functions can be passed
-                as arguments, stored in data structures, and returned as results
-                of function calls.  Functions can be statically nested within 
-                other functions; this lexical scoping mechanism gives the ability
-                to create "new" functions at run time.
+                    <h4>Text Books</h4>
+                    <p>
+                    The following new editions of ML programming textbooks describe SML '97.
+                    <UL>
+                    <LI>
+                    <a href="http://www.cl.cam.ac.uk/users/lcp/MLbook/">Paulson's <i>ML for the Working Programmer (2nd edition)</i></a>
+                    <LI>
+                    <a href="http://www-db.stanford.edu/~ullman/emlp.html">Ullman's
+                        <i>Elements of ML Programming (ML97 Edition)</i></a>
+                    </UL>
+                    <p>
+                    <h4>Implementations</h4>
+                    <dl>
+                    <dt><a href="index.html">Standard ML of New Jersey</a><dd>
+                    SML/NJ versions <a href="NEWS/110-README.html">110</a> and later implement SML
+                    '97 plus some extra features (vector expressions and patterns, OR patterns,
+                    withtype in signatures, higher-order modules).
+                    <dt><a href="http://www.dina.kvl.dk/~sestoft/mosml.html">Moscow ML</a>
+                    <dd>An implementation based on code from Caml Special Light.
+                    The module system provides some extra features (higher-order modules,
+                    first-class structures, recursive modules).
+                    <dt><A HREF="http://www.it-c.dk/research/mlkit/">ML Kit</A>
+                    <dd>The ML Kit implements SML '97 and uses region analysis for memory
+                    management.  The module system is implemented using a scheme called
+                    "static interpretation".
+                    <dt><A HREF="http://www.mlton.org/">MLton</A>
+                    <dd>A whole program compiler for SML '97.
+                    <dt><A HREF="http://www.polyml.org">PolyML</A>
+                    <dd>Versions 4 and later implement SML '97.
+                        </dl></small>
+                    </blockquote>
 
-                <dt><strong>Strict</strong><dd>
-                Function calls in ML, like those of C, Pascal, C++, Java, etc., evaluate
-                their arguments before entering the body of the function.
-                Such a language is called <i>strict</i> or <i>call-by-value</i>,
-                in contrast to some functional programming languages that
-                are <i>lazy</i> or <i>call-by-need</i>.  Strict evaluation makes it
-                easier for the programmer to reason about the execution of the program.
-
-                <dt><strong>Polymorphic</strong><dd>
-                ML supports polymorphic functions and data types.  
-                Data-type polymorphism
-                allows a single type declaration (such as "list") to describe
-                lists of integers, lists of strings, lists of lists of integers, and so on;
-                but the programmer can be assured that, given an "int list",
-                every element really is an "int".  Function polymorphism allows
-                a single function declaration (such as filter_list) to operate on
-                lists of integers, lists of strings, lists of integer-lists,
-                and so on, avoid needless duplication of code.
-
-                <dt><strong>Compile-time type checking</strong><dd>
-                Programmers in compile-time type-checked languages get the
-                benefit not only of faster execution but also less debugging:
-                many of the programmer's mistakes can be caught early in the
-                development process; and the types may lead to clearer thinking about
-                the program's specification.
-
-                <dt><strong>Type inference</strong><dd>
-                The ML programmer need not write down the type of every
-                variable and function-parameter: the compiler can usually
-                calculate the type from context.  This makes programs more
-                concise and easier to write.
-
-                <dt><strong>Garbage collection</strong><dd>
-                Automatic deallocation of unreachable data makes programs
-                simpler, cleaner, and more reliable.
-
-                <dt><strong>Exception handling</strong><dd>
-                ML's exception-handling mechanism -- similar to the ones
-                in C++, Java, Ada, etc. -- provides dynamic nesting of handlers
-                and eliminates the need for ad hoc, special exceptional
-                return values from functions.
-
-                <dt><strong>Immutable data types</strong><dd>
-                In ML, most variables and
-                data structures -- once created and initialized -- are
-                <i>immutable</i>, meaning that they are never changed, updated, or
-                stored into.  This leads to some powerful guarantees of noninterference
-                by different parts of the program operating on those data structures.
-                In a functional language such as ML, one tends to build new data
-                structures (and let the old ones be garbage collected) instead of
-                modifying old ones.
-
-                <dt><strong>Updatable references</strong><dd>
-                However, ML does have updatable (assignable) <i>reference</i> types,
-                so that in those cases where destructive update is the most natural
-                way to express an algorithm, one can express it directly.
-
-                <dt><strong>Abstract data types</strong><dd>
-                ML supports information hiding, so that one can implement a data
-                type whose representation is hidden by an interface that just exports
-                functions to construct and operate on the type.
-
-                <dt><strong>Parametric modules</strong><dd>
-                A <i>functor</i> is an ML program module takes the signature 
-                of another module as an argument.  The functor can then be applied to
-                any module matching that signature.  This facility is like the
-                <i>template</i> of C++ or the <i>generic</i> of Ada or Modula-3,
-                but in ML the functor can be completely type-checked and compiled
-                to machine code before it is applied to its argument(s); this leads
-                to better program modularity.
-
-                <dt><strong>Efficient implementations</strong><dd>
-                Features such as polymorphism, parametric modules, and a heavy
-                reliance on garbage collection have meant that compiling ML to efficient
-                machine code requires techniques not usually necessary in C compilers.
-                Several Standard ML 
-                compilers generate high-quality machine code, including 
-                <a href="index.html">Standard ML of New Jersey</a> and
-                <a href="http://www.harlequin.com/products/ads/ml/">Harlequin ML Works</a>.
-
-                <dt><strong>Formal definition</strong><dd>
-                The ML language is clearly specified by 
-                <a href="http://mitpress.mit.edu/book-home.tcl?isbn=0262631814"><I>The Definition of Standard ML
-                (Revised)</I> (Milner, Tofte, Harper, MacQueen, MIT Press, 1997)</a>,
-                which defines the language in 93 pages of mathematical notation and
-                English prose.  This book is not meant for the casual reader, but
-                it is accessible to the serious student of programming languages and
-                its existence and accessibility provide an implementation-independent
-                formulation of Standard ML.
-
-                <dt><strong>Proof of soundness</strong><dd>
-                A consequence of having the language definition in a formal notation
-                is that one can 
-                <a href="http://simon.trinhall.cam.ac.uk/~mvi20/papers/JAR.html">prove 
-                important properties of the language</a>, such as 
-                deterministic evaluation or soundness of type-checking.
-                </dl>
-                </blockquote>
                 </div>
-                <ul class="list-group" >
-                    <li class="list-group-item"> </li>
+                        </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
